@@ -1,6 +1,162 @@
 # Portfolio_SamuelQuintero_HTML
 
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUDY - Juego Lógico</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero.is-fullheight {
+      background-image: url("https://media.istockphoto.com/id/1732963074/es/foto/cielo-nocturno-estrellado-en-el-espacio.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .hero .title, .hero .subtitle {
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      margin: auto;
+    }
+    .hero .subtitle {
+      margin-top: 50px;
+    }
+    .hero .button {
+      margin-top: 50px;
+      background-color: #00f7ff;
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .boton-opcion {
+      margin: 10px 0;
+    }
+    .oculto {
+      display: none;
+    }
+    section1 {
+      border: 1px solid black;
+    }
+    button {
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #ff0000;
+      cursor: help;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .card-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">Crudy</h1>
+        <h2 class="subtitle is-3" id="titulo">Bienvenido a nuestro juego de <strong>supervivencia</strong> en el que explorarás diferentes <strong>aventuras</strong></h2>
+        <a href="#cartas" class="button is-primary is-medium">Ver Secciones</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cartas">
+    <div class="container has-text-centered">
+      <h2 class="title is-2">Sección de Opciones</h2>
+      <p class="subtitle is-5">Selecciona una de las siguientes funcionalidades</p>
+      <div class="columns is-multiline is-centered mt-5">
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://picsum.photos/id/1011/600/400" alt="Carta 1">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Núcleo Lógico</p>
+              <p class="content">Accede al sistema central para decisiones importantes.</p>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item button is-info is-light" onclick="iniciarJuego('logico')">Opción 1</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://picsum.photos/id/1012/600/400" alt="Carta 2">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Entorno Simulado</p>
+              <p class="content">Explora una simulación de entrenamiento avanzada.</p>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item button is-info is-light" onclick="iniciarJuego('simulado')">Opción 2</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://picsum.photos/id/1013/600/400" alt="Carta 3">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Trampa Activada</p>
+              <p class="content">La ruta peligrosa puede llevar a fallos del sistema.</p>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item button is-danger is-light" onclick="iniciarJuego('trampa')">Opción 3</a>
+            </footer>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="juego"></div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
+
+
+
+
+
 
 
 // Estado global del juego
